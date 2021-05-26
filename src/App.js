@@ -5,7 +5,7 @@ import axios from 'axios';
 function App() {
   const [num, setNum] = useState('')
   const [nextN, setnextN] = useState('')
-  const handleBlur = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
     const n = e.target.value;
     setNum(n)
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App-header">
-      <input type="text" aria-label="number-input" value={num} onChange={handleBlur} />
+      <input type="text" aria-label="number-input" value={num} onChange={handleChange} />
       <p aria-label="result-info">{nextN}</p>
     </div>
   );
